@@ -41,7 +41,7 @@ const servidor = app.listen(PORT, () => {
     console.log(`Servidor en puerto ${PORT}`)
 })
 
-//Socket.io
+//Socket io
 import { Server } from "socket.io";
 
 const io = new Server(servidor, {
