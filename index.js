@@ -64,12 +64,7 @@ io.on("connection", (socket) => {
     });
 
     socket.on("eliminar tarea", (tarea) => {
-        const proyectoValue = tarea.proyecto
-        if (typeof proyectoValue === 'string') {
-            socket.to(proyectoValue).emit('tarea eliminada', tarea)
-        } else if (typeof proyecto === 'object') {
-            socket.to(proyectoValue._id).emit('tarea eliminada', tarea)
-        }
+        socket.to(tarea.proyecto).emit("tarea eliminada", tarea);
     });
 
     socket.on("actualizar tarea", (tarea) => {
