@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
     });
 
     socket.on("eliminar tarea", (tarea) => {
-        (typeof tarea.proyecto === "string") ? socket.to(tarea.proyecto).emit("tarea eliminada", tarea) :
+        (typeof tarea.proyecto === 'string') ? socket.to(tarea.proyecto).emit("tarea eliminada", tarea) :
         socket.to(tarea.proyecto?._id).emit("tarea eliminada", tarea)
     });
 
