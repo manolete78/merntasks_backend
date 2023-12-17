@@ -34,6 +34,12 @@ const tareaSchema = mongoose.Schema({
         ref: "Usuario",
         default: null,
     },
+    idEncargado: {
+        type: String,
+    },
+    encargado: {
+        type: String,
+    },
 }, {
     timestamps: true
 })
